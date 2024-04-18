@@ -192,7 +192,11 @@ function onMouseMove(event) {
   pointerVector.set((x / width - 0.5) * 2.0, (-y / height + 0.5) * 2.0);
 }
 
-function animate() {
+function animate(time) {
+  if (time > 5000) {
+    velocityFactorVector.x = Math.sin((2.5 * time) / 1000) / 0.5 + 0.5;
+    velocityFactorVector.y = Math.sin((3.5 * time) / 1000) / 0.5 + 0.5;
+  }
   renderer.compute(computeNode);
   renderer.render(scene, camera);
 }
