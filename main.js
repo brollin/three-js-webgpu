@@ -25,6 +25,7 @@ let computeNode;
 
 const pointerVector = new THREE.Vector2(-10.0, -10.0); // Out of bounds first
 const scaleVector = new THREE.Vector2(1, 1);
+const velocityFactorVector = new THREE.Vector2(5, 0.25);
 
 init();
 
@@ -72,8 +73,9 @@ function init() {
 
     const pointer = uniform(pointerVector);
     const limit = uniform(scaleVector);
+    const velocityFactor = uniform(velocityFactorVector);
 
-    const position = particle.add(velocity).temp();
+    const position = particle.add(velocity.mul(velocityFactor)).temp();
 
     velocity.x = position.x
       .abs()
