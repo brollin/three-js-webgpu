@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <title>three.js - WebGPU - Compute</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link type="text/css" rel="stylesheet" href="main.css" />
+  </head>
+  <style>
+    body {
+      background-color: black;
+    }
+  </style>
+  <body>
+    <div
+      id="timestamps"
+      style="
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-family: monospace;
+        font-size: 12px;
+        line-height: 1.5;
+        pointer-events: none;
+        text-align: left;
+      "
+    ></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/",
+          "three/nodes": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/nodes/Nodes.js"
+        }
+      }
+    </script>
+
+    <script type="module" src="particles.js"></script>
+  </body>
+</html>
